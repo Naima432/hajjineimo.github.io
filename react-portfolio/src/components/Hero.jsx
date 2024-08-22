@@ -3,10 +3,7 @@ import React from 'react'
 const Hero = () => {
   return (
     <section className='hero divider'>
-        <div className='image'>
-            <img src={profileImage} alt="my photo" />
-
-        </div>
+        
         <div>
             <h1>Neimo Hajji</h1>
             <p>Full-Stack Web Developer</p>
