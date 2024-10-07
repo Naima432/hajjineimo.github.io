@@ -1,17 +1,17 @@
-import React from 'react'
+import React from 'react';
 
 const About = () => {
   return (
-    <section id="about" className='about divider'>
-        <h2>About Me</h2>
-        <P>
-        I am a passionate full-stack web developer who transforms ideas into immersive digital experiences. With a blend of creativity and technical expertise, I bridge the gap between design and functionality, weaving code into seamless user journeys. My mission is to turn your vision into a reality by building web solutions that not only look stunning but also perform flawlessly. Let's embark on a digital adventure together, where innovation knows no bounds. 
-        </P>
-        <p>
-        As a full-stack web developer, I've been on an exciting journey, and it all began with Team Treehouse's TechDegree program. Through their comprehensive curriculum and supportive community, I've had the immersive learning experience has empowered me to craft a portfolio filled with impressive projects that showcase my skills and creativity. Thanks to Team Treehouse, I've not only gained the knowledge and expertise, but also the confidence to tackle any web development challenge that comes my way.  
-        </p>
+    <section id="about" className="about divider">
+      <h2>About Me</h2>
+      <p>
+         
+       Hi, I'm Neimo Hajji Mohamed, a passionate Software Developer and a QA engineer with experience in both full-stack development and IT quality assurance. Currently pursuing my Bachelor's in Computer Science at Metropolitan State University, I have worked on building and maintaining applications while ensuring high-quality standards throughout the development process. I am passionate about solving real-world problems through technology and always looking for opportunities to learn and improve, Outside of school and work, I enjoy outdoor activities and traveling, which help me stay energized and inspired
+        
+      </p>
+      <a className="btn" href="/resume.html"> Download my Resume </a>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
