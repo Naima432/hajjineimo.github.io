@@ -37,10 +37,10 @@ const projectList = [
 const Projects = () => {
   return (
     <section id="projects" className="divider">
-      <h1>My Projects</h1>
+      <h1>Highlighted Projects</h1>
       <div>
-        {projectList.map((project) => (
-          <Project key={project.id} data={project} />
+        {projectList.map((project, i) => (
+          <Project key={project.id} data={project} reverse={i%2 === 0}/>
         ))}
       </div>
       <div>

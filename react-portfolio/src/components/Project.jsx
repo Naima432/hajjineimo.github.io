@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Project = ({data}) => {
+const Project = ({data, reverse}) => {
   return (
 
-   <article className='project'>
+   <article className='project' style={{
+    flexDirection: reverse ? 'row-reverse' : 'row',}
+   }>
     <div className='image'>
         <img src={data.image} alt={data.title} />
     </div>
@@ -18,7 +20,8 @@ const Project = ({data}) => {
         </ul>
         <p>{data.description}</p>
         <div>
-            <a href={data.githubLink}>GitHub</a>
+            
+            <a className="btn" href="#"> Github </a>
         </div>
 
     </div>
