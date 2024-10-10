@@ -26,8 +26,7 @@
 
 body {
 
-  background-color: black;
-  /* background-color: var(--body-bg); */
+   background-color: var(--body-bg); 
 }
 
 main {
@@ -36,11 +35,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 1rem;
+  padding: 0;
 
 
-  background-color: var(--white);
-  margin-inline: 1rem;
+  background-color: black;
+  margin-inline: 0;
 }
 
 section {
@@ -405,6 +404,8 @@ footer {
   }
 
   footer {
+    background-color: white;
+    margin-top: 100px;
     padding-block: 3rem;
   }
 
@@ -438,4 +439,34 @@ footer {
   footer {
     font-size: 1rem;
   }
+
+  .contact-form{
+    padding: 50px;
+   
+    background-color: #f2f2f2;
+  }
+  .name,
+  .email,
+  .msg,
+  .subject{
+    margin-right: 12px;
+    color: var(--primary);
+  }
+  input[type=name], [type=email], [type=text]{
+    margin: 6px 6px;
+    padding: 6px 6px;
+    
+
+  }
+  input[type=text]{
+    margin-top: 6px;
+    margin-right: 15px;
+  }
+
+  textarea[type=text]{
+   margin-top: 6px;
+   margin-right: 24px;
+   height: 150px;
+  }
+
 }
