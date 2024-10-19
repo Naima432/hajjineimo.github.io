@@ -5,9 +5,10 @@ const Hero = () => {
     <section className='hero divider'>
         
         <div>
-            <h1>Neimo Hajji</h1>
-            <p>Full-Stack Web Developer</p>
-            <p>Minneapolis, Minnesota</p>
+            <h3 >Hi, I'm</h3>
+            <h1>Neimo HaJJi</h1>
+            <p>Software Developer</p>
+           
             <a href="#projects" className='btn' >Check Out My Work</a>
         </div>
     

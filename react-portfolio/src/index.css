@@ -8,15 +8,16 @@
 
 /* Global CSS Variables */
 :root {
-  --body-bg: #F0EDE5;
-  --header-text: #334D32;
-  --body-text: #5E5A52;
-  --headings: #6B8E23;
-  --primary: #8FBC8F;
-  --primary-shadow: #728F6C;
-  --secondary: #BDB76B;
-  --secondary-shadow: #9C9F84;
-  --white: #FFFFFF;
+  --body-bg: #ECECEC; /* Light neutral gray background */
+  --header-text: #1A1A1A; /* Deep black for headers to create bold contrast */
+  --body-text: #4D4D4D; /* Dark gray for body text for clear readability */
+  --headings: #2F2F2F; /* Almost black for strong and simple headings */
+  --primary: #3498db; /* Cool and modern blue for primary elements */
+  --primary-shadow: #2980b9; /* Slightly darker blue for shadowing */
+  --secondary: #95a5a6; /* Elegant muted gray for secondary elements */
+  --secondary-shadow: #7f8c8d; /* Darker gray for secondary shadow */
+  --white: #FFFFFF; /* Crisp white for clean contrast */
+  
   font-family: 'Young Serif', serif;
   text-align: center;
   scroll-behavior: smooth;
@@ -26,7 +27,12 @@
 
 body {
 
-   background-color: var(--body-bg); 
+  
+   overflow-x: hidden;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+ 
 }
 
 main {
@@ -103,7 +109,7 @@ img {
 
 .btn {
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 25px;
   color: var(--header-text);
   background-color: var(--secondary);
   box-shadow: 0 2px var(--secondary-shadow);
@@ -289,13 +295,13 @@ header button:hover {
 }
 
 /* FOOTER */
+footer{
 
-footer {
-  padding-block: 1.5rem;
-  font-size: 0.75rem;
-  color: var(--header-text);
-  background-color: var(--primary);
-  margin-inline: 1rem;
+  background-color: gray;
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  margin-bottom: 0;
 }
 
 .nav {
@@ -366,17 +372,9 @@ footer {
 
   /* FONT SIZES & SPACING */
 
-  header,
-  main,
-  footer {
-    max-width: 992px;
-    margin-inline: auto;
-    padding-inline: 3rem;
-  }
+ 
 
-  main {
-    padding-block: 6rem;
-  }
+ 
 
   section {
     width: 100%;
@@ -403,12 +401,7 @@ footer {
     margin-bottom: 1rem;
   }
 
-  footer {
-    background-color: white;
-    margin-top: 100px;
-    padding-block: 3rem;
-  }
-
+ 
   h1 {
     font-size: 4rem;
   }
@@ -433,40 +426,40 @@ footer {
     font-size: 1.15rem;
   }
 
-  .project .content p,
-  .hero p:last-of-type,
-  .contact p,
-  footer {
-    font-size: 1rem;
-  }
 
   .contact-form{
-    padding: 50px;
+    width: 50%;
    
-    background-color: #f2f2f2;
+   
   }
   .name,
   .email,
   .msg,
   .subject{
+
     margin-right: 12px;
     color: var(--primary);
+   
   }
   input[type=name], [type=email], [type=text]{
+    width: 50%;
     margin: 6px 6px;
-    padding: 6px 6px;
+    padding: 12px 12px;
+    border-radius: 10px;
     
 
   }
   input[type=text]{
     margin-top: 6px;
     margin-right: 15px;
+   
   }
 
   textarea[type=text]{
    margin-top: 6px;
    margin-right: 24px;
    height: 150px;
+   border-radius: 10px;
   }
 
 }
