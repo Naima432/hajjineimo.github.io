@@ -13,6 +13,17 @@ const projectList = [
     image: "/src/assets/project.jpg"
   
   },
+  {
+    id: 1,
+    title: 'Todo App',
+    tech: ['Kotlin', 'Android Studio', 'SQLite'],
+    description:
+      'Developed a Todo List application using Kotlin and Android Studio. Implemented features like task creation, editing, and deletion. Designed a simple and intuitive UI for managing daily tasks, and integrated SQLite for local data storage.',
+    liveLink: '#',
+    githubLink: '#',
+    image: "/src/assets/project.jpg"
+  
+  },
   
     {
       id: 2,

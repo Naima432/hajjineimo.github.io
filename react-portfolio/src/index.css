@@ -9,10 +9,10 @@
 /* Global CSS Variables */
 :root {
   --body-bg: #ECECEC; /* Light neutral gray background */
-  --header-text: gray; /* Deep black for headers to create bold contrast */
-  --body-text: gray; /* Dark gray for body text for clear readability */
+  --header-text: black; /* Deep black for headers to create bold contrast */
+  --body-text: black; /* Dark gray for body text for clear readability */
   --headings: #2F2F2F; /* Almost black for strong and simple headings */
-  --primary: #3498db; /* Cool and modern blue for primary elements */
+  --primary: white; /* Cool and modern blue for primary elements */
   --primary-shadow: #2980b9; /* Slightly darker blue for shadowing */
   --secondary: #95a5a6; /* Elegant muted gray for secondary elements */
   --secondary-shadow: #7f8c8d; /* Darker gray for secondary shadow */
@@ -24,10 +24,16 @@
 }
 
 /* BASE STYLES */
+.menu-btn img {
+  filter: brightness(0) saturate(100%);
+  width: 30px; /* Adjust size as needed */
+  height: 30px;
+}
+
 
 body {
 
-   background-color: #000;
+   background-color: white;
    overflow-x: hidden;
    width: 100%;
    margin: 0;
@@ -45,7 +51,8 @@ main {
   padding: 0;
 
 
-  background-color: black;
+  background-color: white;
+  color: black;
   margin-inline: 0;
 }
 
@@ -97,12 +104,14 @@ img {
   height: auto;
 }
 
+
 .section-square {
   rotate: 10deg;
 }
 
 .hero p:last-of-type,
 .about p:last-of-type {
+  padding-top: 20px;
   margin-bottom: 1.5rem;
 }
 
@@ -112,10 +121,11 @@ img {
 /* UTILITY CLASSES */
 
 .btn {
+  padding-top: 20px;
   padding: 0.5rem 1rem;
   border-radius: 25px;
   color: var(--header-text);
-  background-color: var(--secondary);
+  background-color: pink;
   box-shadow: 0 2px var(--secondary-shadow);
   transition: background-color 0.3s ease;
 }
@@ -159,7 +169,7 @@ header {
   align-items: center;
   padding: 1rem;
   color: var(--header-text);
-  background-color: rgb(255, 224, 224);
+  background-color: white;
 }
 
 header span {
@@ -184,31 +194,52 @@ header button:hover {
 
 
 /* HERO SECTION */
-.mypic {
+.herodivider {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  
-  width: 500px; 
-  height: 500px; 
-  border-radius: 50%; 
-  border: 2px solid #000; 
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-  object-fit: cover; 
-}
-.herodivider{
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  color: var(--secondary);
+#hero-heading {
+  font-size: 3rem;
+  margin: 0.5rem 0;
 }
 
-.hero p:last-of-type {
-  font-size: 0.9rem;
+#hero-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  background-color: #0077b5; /* Adjust to your theme */
+  color: black;
+  text-decoration: none;
+ 
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
+
+#hero-btn:hover {
+  background-color: #005a8c; /* Darken on hover */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  color: #000; /* Icon color */
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0077b5; /* Change to blue on hover */
+}
+
 
 /* ABOUT */
 
@@ -269,6 +300,7 @@ header button:hover {
 
 /* CONTACT */
 
+
 .contact p {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
@@ -286,7 +318,6 @@ header button:hover {
   fill: var(--secondary);
   transition: transform 0.3s ease, fill 0.3s ease;
 }
-
 .socials-container svg:hover {
   transform: scale(1.2);
   fill: var(--secondary-shadow);
@@ -295,7 +326,7 @@ header button:hover {
 /* FOOTER */
 footer{
 
-  background-color: gray;
+  background-color: white;
   width: 100%;
   margin-top: 5px;
   padding: 10px;
@@ -305,18 +336,50 @@ footer{
 .nav {
   position: absolute;
   z-index: 50;
-  top: 40px; /* moved lower later */
+  top: 40px; /* Adjusts position from the top */
   left: 0;
   width: 100%;
   padding-block: 2rem;
   font-size: 2.5rem;
   background-color: var(--primary);
-  transform: translateY(-120%);
+  transform: translateY(-120%); /* Hides menu initially */
   transition: transform 0.3s ease;
 }
 
 .nav.open {
-  transform: translateX(0%);
+  transform: translateY(0%); /* Slides menu down */
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  margin: 1rem 0; /* Space between items on mobile */
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #0077b5 ;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
 }
 
 /* MEDIA QUERIES */
@@ -333,7 +396,7 @@ footer{
     padding-top: 0;
     font-size: 1.5rem;
     background-color: transparent;
-    transform: translateY(0%);
+    transform: translateY(0);
     padding-block: 0;
   }
 
@@ -341,6 +404,13 @@ footer{
     display: flex;
     gap: 3rem;
   }
+
+  .nav li {
+    margin: 0; /* Remove extra spacing for desktop */
+  }
+}
+
+  
 
   .hero {
     flex-direction: row-reverse;
@@ -367,6 +437,21 @@ footer{
     width: 35px;
     height: 35px;
   }
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .social-icons a {
+    color: inherit; /* Inherit color from parent */
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #0077b5; /* LinkedIn blue */
+  }
+  
 
   /* FONT SIZES & SPACING */
 
@@ -460,4 +545,4 @@ footer{
    border-radius: 10px;
   }
 
-}
+
