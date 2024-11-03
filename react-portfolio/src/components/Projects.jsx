@@ -10,6 +10,8 @@ const projectList = [
       'Developed a Todo List application using Kotlin and Android Studio. Implemented features like task creation, editing, and deletion. Designed a simple and intuitive UI for managing daily tasks, and integrated SQLite for local data storage.',
     liveLink: '#',
     githubLink: '#',
+    image: "/src/assets/project.jpg"
+  
   },
   
     {
@@ -20,6 +22,7 @@ const projectList = [
         'Developed a user-friendly Salon Scheduler application using JavaFX, designed to manage appointments, client information, and services for a salon. Integrated SQLite for persistent data storage, handling client profiles and service records.',
       liveLink: '#',
       githubLink: '#',
+      image: "/src/assets/project.jpg"
     },
     {
       id: 3,
@@ -29,6 +32,7 @@ const projectList = [
         'Developed a comprehensive application in Java that manipulates and analyzes graph data structures. The project involved implementing various algorithms to solve problems related to graph traversal, minimum spanning trees, depth-first search classification, and solving the Traveling Salesman Problem (TSP) using different heuristic methods.',
       liveLink: '#',
       githubLink: '#',
+      image: "/src/assets/project.jpg"
     },
   
   

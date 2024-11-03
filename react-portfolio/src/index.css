@@ -9,8 +9,8 @@
 /* Global CSS Variables */
 :root {
   --body-bg: #ECECEC; /* Light neutral gray background */
-  --header-text: #1A1A1A; /* Deep black for headers to create bold contrast */
-  --body-text: #4D4D4D; /* Dark gray for body text for clear readability */
+  --header-text: gray; /* Deep black for headers to create bold contrast */
+  --body-text: gray; /* Dark gray for body text for clear readability */
   --headings: #2F2F2F; /* Almost black for strong and simple headings */
   --primary: #3498db; /* Cool and modern blue for primary elements */
   --primary-shadow: #2980b9; /* Slightly darker blue for shadowing */
@@ -27,11 +27,12 @@
 
 body {
 
-  
+   background-color: #000;
    overflow-x: hidden;
    width: 100%;
    margin: 0;
    padding: 0;
+   font-family: 'Roboto', sans-serif;
  
 }
 
@@ -105,6 +106,9 @@ img {
   margin-bottom: 1.5rem;
 }
 
+
+
+
 /* UTILITY CLASSES */
 
 .btn {
@@ -155,7 +159,7 @@ header {
   align-items: center;
   padding: 1rem;
   color: var(--header-text);
-  background-color: var(--primary);
+  background-color: rgb(255, 224, 224);
 }
 
 header span {
@@ -178,29 +182,23 @@ header button:hover {
   fill: var(--secondary);
 }
 
-/* HERO SECTION */
 
-.hero .image {
+/* HERO SECTION */
+.mypic {
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-top: 20px;
+  
+  width: 500px; 
+  height: 500px; 
+  border-radius: 50%; 
+  border: 2px solid #000; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  object-fit: cover; 
 }
-
-.hero .image:after {
-  content: '';
-  position: absolute;
-  rotate: 10deg;
-  position: relative;
-  width: 200px;
-  height: 200px;
-  background-color: var(--secondary);
-}
-
-.hero .image img {
-  position: absolute;
-  z-index: 10;
-  width: 200px;
-  background-color: var(--body-bg);
+.herodivider{
+  display: flex;
+  justify-content: center;
 }
 
 .hero p {
