@@ -8,15 +8,15 @@
 
 /* Global CSS Variables */
 :root {
-  --body-bg: #ECECEC; /* Light neutral gray background */
-  --header-text: black; /* Deep black for headers to create bold contrast */
-  --body-text: black; /* Dark gray for body text for clear readability */
-  --headings: #2F2F2F; /* Almost black for strong and simple headings */
-  --primary: white; /* Cool and modern blue for primary elements */
-  --primary-shadow: #2980b9; /* Slightly darker blue for shadowing */
-  --secondary: #95a5a6; /* Elegant muted gray for secondary elements */
-  --secondary-shadow: #7f8c8d; /* Darker gray for secondary shadow */
-  --white: #FFFFFF; /* Crisp white for clean contrast */
+  --body-bg: #ECECEC; 
+  --header-text: black;
+  --body-text: black; 
+  --headings: #2F2F2F; 
+  --primary: rgb(252, 246, 246); 
+  --primary-shadow: #2980b9; 
+  --secondary: #95a5a6; 
+  --secondary-shadow: #7f8c8d; 
+  --white: #FFFFFF; 
   
   font-family: 'Young Serif', serif;
   text-align: center;
@@ -73,7 +73,7 @@ h1 {
   font-size: 3rem;
   line-height: 1;
   margin-bottom: 1rem;
-  color: var(--headings);
+  color: black;
 }
 
 h2 {
@@ -86,7 +86,7 @@ h3 {
   font-weight: 400;
   margin-bottom: 0.5rem;
   font-size: 1rem;
-  color: var(--primary);
+  color: black
 }
 
 li {
@@ -167,9 +167,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 10px;
   color: var(--header-text);
-  background-color: white;
+  background-color:  rgb(215, 211, 211);
 }
 
 header span {
@@ -251,6 +251,9 @@ header button:hover {
 
 .project {
   margin-bottom: 2.5rem;
+  padding: 20px;
+  background-color: rgb(252, 246, 246);
+  border-radius: 20px;
 }
 
 .project:last-of-type {
@@ -304,7 +307,7 @@ header button:hover {
 .contact p {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
-  color: var(--primary);
+  color: black;
 }
 
 .socials-container {
@@ -521,7 +524,7 @@ footer{
   .subject{
 
     margin-right: 12px;
-    color: var(--primary);
+    color: black;
    
   }
   input[type=name], [type=email], [type=text]{
@@ -545,4 +548,79 @@ footer{
    border-radius: 10px;
   }
 
-
+  #experience {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .experience-item {
+    background-color: var(--primary);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    text-align: left;
+  }
+  
+  .experience-item h3 {
+    font-size: 1.5rem;
+    color: var(--headings);
+    margin-bottom: 0.5rem;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .skills-list li {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .experience-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--body-text);
+  }
+  .skills-section {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .skills-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--headings);
+  }
+  
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--body-text);
+  }
+  
+  .skill-item .icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-item .icon:hover {
+    transform: scale(1.1); /* Slight enlargement on hover */
+  }
+  
