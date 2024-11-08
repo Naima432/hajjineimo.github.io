@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className='herodivider' aria-labelledby="hero-heading">
       <div>
-        <h3>Hello, I'm</h3>
+        <h3>Hello there, I'm</h3>
         <h1 id="hero-heading">Neimo Hajji</h1>
         <p>Software Developer</p>
         

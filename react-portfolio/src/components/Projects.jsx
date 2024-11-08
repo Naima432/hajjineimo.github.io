@@ -14,7 +14,7 @@ const projectList = [
   
   },
   {
-    id: 1,
+    id: 2,
     title: 'Todo App',
     tech: ['Kotlin', 'Android Studio', 'SQLite'],
     description:
@@ -26,7 +26,7 @@ const projectList = [
   },
   
     {
-      id: 2,
+      id: 3,
       title: 'Salon Scheduler APP',
       tech: ['Java', 'JavaFX', 'SQLite'],
       description:
@@ -36,7 +36,7 @@ const projectList = [
       image: "/src/assets/project.jpg"
     },
     {
-      id: 3,
+      id: 4,
       title: 'Graph Analysis Project',
       tech: ['Java'],
       description:
