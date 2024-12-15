@@ -4,10 +4,10 @@ import Project from "./Project";
 const projectList = [
   {
     id: 1,
-    title: 'Todo App',
-    tech: ['Kotlin', 'Android Studio', 'SQLite'],
+    title: 'Photo ABCD',
+    tech: ['PHP', 'JavaScript','CSS','HTML','SQL'],
     description:
-      'Developed a Todo List application using Kotlin and Android Studio. Implemented features like task creation, editing, and deletion. Designed a simple and intuitive UI for managing daily tasks, and integrated SQLite for local data storage.',
+    'Photo ABCD is an innovative web application for blogging enthusiasts, designed to organize, showcase, and share blogs with an emphasis on photos. It provides tools to compile blogs alphabetically or chronologically while offering customization options, interactive dashboards, and collaboration features',
     liveLink: '#',
     githubLink: '#',
     image: "/src/assets/project.jpg"
