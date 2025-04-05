@@ -10,19 +10,20 @@
 }
 
 /* =========================================
-   CSS VARIABLES (Warm & Pastel-Neutral Palette)
+   DARK PURPLE ("MIMO-STYLE") THEME
    ========================================= */
 :root {
-  --body-bg: #FFF8EB;          /* Warm off-white background */
-  --header-text: #3C2E2A;      /* Rich, warm dark brown for headers */
-  --body-text: #5A5148;        /* Soft brownish-gray for body text */
-  --headings: #3C2E2A;         /* Same as header text for headings */
-  --primary: #FFFFFF;          /* White for cards and sections */
-  --primary-shadow: #D8C8B5;   /* Warm neutral shadow */
-  --secondary: #D8C8B5;        /* Taupe neutral for accents */
-  --secondary-shadow: #C8A96D; /* Muted gold accent */
-  --accent-color: #FDE8A7;     /* Soft buttery-yellow accent color */
-
+  --body-bg: #1C1B33;         /* Deep purple background */
+  --header-text: #FFFFFF;     /* Bright white for header text */
+  --body-text: #E0E0E0;       /* Light gray for normal text */
+  --headings: #FFFFFF;        /* White for headings */
+  
+  --primary: #252442;         /* Dark card/section background */
+  --primary-shadow: #2F2D50;  /* Slightly darker purple shadow */
+  --secondary: #34315E;       /* Border/accent color */
+  --secondary-shadow: #3C3872;/* Darker accent for hovers/shadows */
+  --accent-color: #7F6BFB;    /* Main purple accent for buttons, etc. */
+  
   --heading-font: 'Young Serif', serif;
   --body-font: 'Roboto', sans-serif;
 
@@ -49,8 +50,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--body-bg);
-  color: var(--body-text);
+  /* Let text/color inherit from body. */
 }
 
 section {
@@ -122,26 +122,32 @@ img {
   margin-bottom: 1rem;
 }
 
-/* BUTTONS */
-.btn, #hero-btn {
+/* =========================================
+   BUTTONS
+   ========================================= */
+.btn,
+#hero-btn {
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
   background-color: var(--accent-color);
   color: var(--header-text);
   font-weight: bold;
   font-size: 1rem;
-  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+  transition: background-color var(--transition-speed) ease,
+              transform var(--transition-speed) ease;
   cursor: pointer;
   border: none;
 }
 
 .btn:hover,
 #hero-btn:hover {
-  background-color: #FCE7AE;
+  background-color: #9D94FC; /* Slightly lighter purple for hover */
   transform: translateY(-2px);
 }
 
-/* DIVIDERS */
+/* =========================================
+   DIVIDERS
+   ========================================= */
 .divider {
   position: relative;
   margin-bottom: 3rem;
@@ -158,15 +164,17 @@ img {
   transform: translateX(-50%) rotate(10deg);
 }
 
-/* HEADER */
+/* =========================================
+   HEADER
+   ========================================= */
 header {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 1rem;
+  background-color: var(--primary-shadow);
   color: var(--header-text);
-  background-color: var(--body-bg);
   font-size: 1.15rem;
   border-bottom: 1px solid var(--secondary);
 }
@@ -185,7 +193,7 @@ header button {
   width: 24px;
   background: none;
   border: none;
-  fill: var(--headings); /* Ensures the icon is dark and visible */
+  fill: var(--headings);
   transition: fill var(--transition-speed) ease;
   z-index: 100;
 }
@@ -195,12 +203,14 @@ header button:hover {
 }
 
 .menu-btn img {
-  filter: none; /* Remove the filter to ensure the icon is visible */
+  filter: none;
   width: 30px;
   height: 30px;
 }
 
-/* NAV MENU */
+/* =========================================
+   NAV MENU (MOBILE)
+   ========================================= */
 .nav {
   position: absolute;
   z-index: 100;
@@ -209,7 +219,7 @@ header button:hover {
   width: 100%;
   padding-block: 2rem;
   font-size: 2rem;
-  background-color: rgba(255,248,235,0.95);
+  background-color: var(--secondary-shadow);
   backdrop-filter: blur(5px);
   transform: translateY(-120%);
   transition: transform var(--transition-speed) ease;
@@ -226,12 +236,12 @@ header button:hover {
 }
 
 .nav li {
-  margin: 1rem 0; 
+  margin: 1rem 0;
 }
 
 .nav a {
   text-decoration: none;
-  color: var(--headings);  
+  color: var(--headings);
   position: relative;
   padding: 0.5rem 0.75rem;
   border-radius: 8px;
@@ -260,7 +270,9 @@ header button:hover {
   outline-offset: 4px;
 }
 
-/* HERO SECTION */
+/* =========================================
+   HERO SECTION
+   ========================================= */
 .herodivider {
   display: flex;
   flex-direction: column;
@@ -327,31 +339,47 @@ header button:hover {
   color: var(--accent-color);
 }
 
-/* ABOUT SECTION */
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
 .about p {
   margin-bottom: 1.5rem;
 }
 
-/* PROJECTS SECTION */
-.project {
-  margin-bottom: 2.5rem;
-  padding: 1.5rem;
+/* =========================================
+   "CARD" COMPONENT (Project & Experience)
+   ========================================= */
+.card,
+.project,
+.experience-item {
   background-color: var(--primary);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(216,200,181,0.3);
-  transition: box-shadow var(--transition-speed) ease, transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+  box-shadow: 0 4px 8px rgba(47, 45, 80, 0.3); /* Subtle shadow */
+  padding: 1.5rem;
+  transition: box-shadow var(--transition-speed) ease,
+              transform var(--transition-speed) ease,
+              background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease;
 }
 
-.project:hover {
+.card:hover,
+.project:hover,
+.experience-item:hover {
   background-color: var(--accent-color);
   color: var(--headings);
-  box-shadow: 0 6px 12px rgba(216,200,181,0.5);
+  box-shadow: 0 6px 12px rgba(47, 45, 80, 0.5);
   transform: translateY(-2px);
+}
+
+/* =========================================
+   PROJECTS SECTION
+   ========================================= */
+.project {
+  margin-bottom: 2.5rem;
 }
 
 .project .image {
   width: 100%;
-  height: auto;
   margin-bottom: 0.5rem;
   aspect-ratio: 16/9;
   border-radius: 4px;
@@ -381,27 +409,12 @@ header button:hover {
   box-shadow: 0 1px var(--primary-shadow);
 }
 
-/* EXPERIENCE SECTION */
-#experience {
-  padding: 2rem;
-  text-align: center;
-}
-
+/* =========================================
+   EXPERIENCE SECTION
+   ========================================= */
 .experience-item {
-  background-color: var(--primary);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(216,200,181,0.3);
   margin-bottom: 2rem;
-  padding: 1.5rem;
   text-align: left;
-  transition: box-shadow var(--transition-speed) ease, transform var(--transition-speed) ease, background-color var(--transition-speed) ease, color var(--transition-speed) ease;
-}
-
-.experience-item:hover {
-  background-color: var(--accent-color);
-  color: var(--headings);
-  box-shadow: 0 6px 12px rgba(216,200,181,0.5);
-  transform: translateY(-2px);
 }
 
 .experience-item h3 {
@@ -430,7 +443,9 @@ header button:hover {
   color: var(--body-text);
 }
 
-/* SKILLS SECTION */
+/* =========================================
+   SKILLS SECTION
+   ========================================= */
 .skills-section {
   text-align: center;
   padding: 2rem;
@@ -472,7 +487,9 @@ header button:hover {
   transform: scale(1.1);
 }
 
-/* CONTACT SECTION */
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
 .contact p {
   margin-bottom: 0.75rem;
   font-size: 1rem;
@@ -492,6 +509,8 @@ header button:hover {
   font-weight: bold;
   color: var(--headings);
 }
+
+/* Darker input fields (adjust if you want lighter text fields). */
 .contact-form input[type="name"],
 .contact-form input[type="text"],
 .contact-form input[type="email"],
@@ -503,9 +522,10 @@ header button:hover {
   border-radius: 8px;
   font-size: 1rem;
   color: var(--body-text);
-  background-color: #FFFFFF;
+  background-color: #2A2846; /* Darker purple input background */
   transition: border-color var(--transition-speed) ease;
 }
+
 .contact-form input[type="name"]:focus,
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
@@ -526,11 +546,12 @@ header button:hover {
   font-size: 1rem;
   cursor: pointer;
   border: none;
-  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+  transition: background-color var(--transition-speed) ease,
+              transform var(--transition-speed) ease;
 }
 
 .contact-form button:hover {
-  background-color: #FCE7AE;
+  background-color: #9D94FC;
   transform: translateY(-2px);
 }
 
@@ -543,7 +564,8 @@ header button:hover {
   width: 20px;
   height: 20px;
   fill: var(--secondary);
-  transition: transform var(--transition-speed) ease, fill var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease,
+              fill var(--transition-speed) ease;
 }
 
 .socials-container svg:hover {
@@ -551,20 +573,24 @@ header button:hover {
   fill: var(--secondary-shadow);
 }
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+   ========================================= */
 footer {
   background-color: var(--primary);
   width: 100%;
-  margin-top: 5px;
   padding: 1rem;
+  margin-top: 5px;
   margin-bottom: 0;
   font-size: 0.9rem;
-  color: #777;
+  color: #999; /* Slightly lighter than body-text for footer text */
   text-align: center;
   border-top: 1px solid var(--secondary);
 }
 
-/* MEDIA QUERIES */
+/* =========================================
+   MEDIA QUERIES
+   ========================================= */
 @media (min-width: 1024px) {
   header button {
     display: none;
@@ -683,9 +709,11 @@ footer {
     align-items: center;
   }
 }
+
+/* Keep the mobile menu icon with a subtle background highlight */
 .menu-btn img {
   width: 30px;
   height: 30px;
-  background: #00000033;  
+  background: #00000033;
   padding: 5px;
 }

@@ -22,7 +22,7 @@ const Experience = () => {
         <h1>Experience</h1>
       </div>
       <ExperienceItem
-        title="IT Developer"
+        title="IT Developer Intern"
         company="Hennepin County"
         dates="July 2024 – Present"
         skills={['Angular', 'TypeScript', 'HTML', 'CSS']}
