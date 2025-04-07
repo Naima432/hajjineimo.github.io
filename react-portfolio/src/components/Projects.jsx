@@ -34,7 +34,7 @@ const projectList = [
         'Developed a user-friendly Salon Scheduler application using JavaFX, designed to manage appointments, client information, and services for a salon. Integrated SQLite for persistent data storage, handling client profiles and service records.',
       liveLink: '#',
       githubLink: '#',
-      image: "/src/assets/project.jpg"
+      image: projectImg
     },
     {
       id: 4,
