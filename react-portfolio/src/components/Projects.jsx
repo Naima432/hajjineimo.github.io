@@ -11,7 +11,7 @@ const projectList = [
     'Photo ABCD is an innovative web application for blogging enthusiasts, designed to organize, showcase, and share blogs with an emphasis on photos. It provides tools to compile blogs alphabetically or chronologically while offering customization options, interactive dashboards, and collaboration features',
     liveLink: '#',
     githubLink: '#',
-    image: {projectImg}
+    image: projectImg
   
   },
   {
@@ -22,7 +22,7 @@ const projectList = [
       'Developed a Todo List application using Kotlin and Android Studio. Implemented features like task creation, editing, and deletion. Designed a simple and intuitive UI for managing daily tasks, and integrated SQLite for local data storage.',
     liveLink: '#',
     githubLink: '#',
-    image: "/src/assets/project.jpg"
+    image: projectImg
   
   },
   
@@ -44,7 +44,7 @@ const projectList = [
         'Developed a comprehensive application in Java that manipulates and analyzes graph data structures. The project involved implementing various algorithms to solve problems related to graph traversal, minimum spanning trees, depth-first search classification, and solving the Traveling Salesman Problem (TSP) using different heuristic methods.',
       liveLink: '#',
       githubLink: '#',
-      image: "/src/assets/project.jpg"
+      image: projectImg
     },
   
   
