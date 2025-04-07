@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import menu from '../assets/open_menu.svg';
 import close from '../assets/close_menu.svg'
+import resume from '/resume.html'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,7 +35,7 @@ const Header = () => {
           <a href="#contact">Contact</a>
         </li>
         <li>
-          <a href="/resume.html" target='_blank'>Resume</a>
+          <a href={resume} target='_blank'>Resume</a>
         </li>
       </ul>
     </nav>
