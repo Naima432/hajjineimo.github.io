@@ -1,4 +1,5 @@
 import Project from "./Project";
+import projectImg from '../assets/project.jpg';  // Import the image
 //import storyGenerator from '../path/to/image'; // Ensure you import the image correctly
 
 const projectList = [
@@ -10,7 +11,7 @@ const projectList = [
     'Photo ABCD is an innovative web application for blogging enthusiasts, designed to organize, showcase, and share blogs with an emphasis on photos. It provides tools to compile blogs alphabetically or chronologically while offering customization options, interactive dashboards, and collaboration features',
     liveLink: '#',
     githubLink: '#',
-    image: "/src/assets/project.jpg"
+    image: {projectImg}
   
   },
   {
