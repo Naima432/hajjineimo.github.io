@@ -15,10 +15,9 @@ const Hero = () => {
         />
 
         <div className="hero-text">
-          <h3>Hello there, I'm</h3>
           <h1 id="hero-heading">Neimo Hajji</h1>
           <p>Aspiring Software Developer</p>
-          <a href="#projects" className='btn' id='hero-btn'>Check Out My Work</a>
+          <a href="#projects" className='btn' id='hero-btn'>Check Out My Work!</a>
 
           {/* Social Media Icons */}
           <div className='social-icons'>
