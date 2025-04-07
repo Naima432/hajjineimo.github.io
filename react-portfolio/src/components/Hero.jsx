@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import myPic from "../assets/mypic.jpg";
+
 
 const Hero = () => {
   return (
@@ -7,7 +9,7 @@ const Hero = () => {
       <div className="hero-content">
         {/* Profile Picture */}
         <img 
-          src="/src/assets/mypic.jpg"
+          src= {myPic}
           alt="Neimo Hajji profile picture" 
           className="profile-pic"
         />
