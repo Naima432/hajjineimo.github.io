@@ -62,7 +62,8 @@ const Projects = () => {
       <div>
         <br />
       <div>
-       <a className="btn" href="#"> All Projects </a>
+     
+       <a href="https://github.com/Naima432" className="btn"  > All Projects </a>
     </div>
       </div>
     </section>
