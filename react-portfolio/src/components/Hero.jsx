@@ -8,11 +8,11 @@ const Hero = () => {
     <section className='herodivider' aria-labelledby="hero-heading">
       <div className="hero-content">
         {/* Profile Picture */}
-        <img 
+        {/* <img 
           src= {myPic}
           alt="Neimo Hajji profile picture" 
           className="profile-pic"
-        />
+        /> */}
 
         <div className="hero-text">
           <h1 id="hero-heading">Neimo Hajji</h1>
